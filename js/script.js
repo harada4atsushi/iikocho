@@ -37,7 +37,7 @@ $(function(){
 
 	$('#stamp_list td').on('click', function(){
 		var month = $(this).attr('id').replace('month_', '');
-		localStorage[year+month] = true;
+		//localStorage[year+month] = true;
 		window.location = 'index.html?ym='+year+month;
 	});
 });

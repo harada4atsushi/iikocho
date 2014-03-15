@@ -5,7 +5,10 @@ body, html {
 }
 
 body {
-  background-image: url(../img/backSnow.png);
+  background: #FFF url('../img/bg.png') no-repeat left top;
+  -webkit-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
 }
  
 #container {
