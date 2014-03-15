@@ -1,4 +1,5 @@
 // DEMO
+/*
 localStorage[201401] = true;
 localStorage[201402] = true;
 localStorage[201403] = true;
@@ -9,7 +10,8 @@ localStorage[201407] = true;
 localStorage[201408] = true;
 localStorage[201409] = true;
 localStorage[201410] = true;
-  
+ */
+ 
 $(function(){
 
 	var date  = new Date();
@@ -37,7 +39,7 @@ $(function(){
 
 	$('#stamp_list td').on('click', function(){
 		var month = $(this).attr('id').replace('month_', '');
-		localStorage[year+month] = true;
+		//localStorage[year+month] = true;
 		window.location = 'index.html?ym='+year+month;
 	});
 });

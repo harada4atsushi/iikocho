@@ -3,60 +3,10 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>quojs sample</title>
+    <title>ねえ、サンタさん</title>
     <link rel="stylesheet" href="css/messages.css" type="text/css"> 
     <script src="js/quo.js"></script>
-    <script>
-      $$(document).ready(function(){
-        var direction = 'left';
-        $$("#done").touch(function() {
-          var message = $$("#message_text").val();
-          if (message == '') message = '　';
-          var mes = $$('<li class="left"></li>').html(message); 
-          $$("#mes_region").append(mes);
-          setTimeout(santaSay, 1400);
-        });
-
-      function santaSay() {
-        var mes = $$('<li class="right"></li>').html('サンタだよ！'); 
-        $$("#mes_region").append(mes);
-      }
-
-
-
-/*
-        $$("#description").html("QuoJSを試しに使ってみました。このページはとても簡単なサンプルコードです。<br/>すぐ下の四角い枠で左右のスワイプや長押のテストができます");
-        $$("#event_zone").style("width","300px");
-        $$("#event_zone").style("height","100px");
-        $$("#event_zone").style("border","1px solid");
-        $$("#event_zone").swipeLeft(function(){
-          alert("もしかして左にスワイプしましたか？");
-        });
-        $$("#event_zone").swipeRight(function(){
-          alert("もしかして右にスワイプしましたか？");
-        });
-        $$("#event_zone").hold(function(){
-          if(confirm("長押してますね？")){
-            alert("正直ですね！");
-          }
-        });
-
-        $$("#event_zone").on("click",function(){
-          alert("onメソッドで、eventのバインドもできます。");
-        });
-
-        var environment = $$.environment();
-        var browser = environment.browser;
-        var isMobile = environment.isMobile;
-        var os_name = environment.os.name;
-        var os_version = environment.os.version;
-        var screen = environment.screen;
-        var online = $$.isOnline();
-
-        $$("#your_info").html("Browser::"+browser+"<br/>"+"isMobile::"+isMobile+"<br/>"+"os_name::"+os_name+"<br/>"+"os_version::"+os_version+"<br/>"+"screen_width::"+screen.width+"<br/>"+"screen_height::"+screen.height);
-*/
-      });
-    </script>
+    <script src="js/messages.js"></script>
   </head>
   <body>
     <div id="container">
