@@ -31,6 +31,6 @@ $(function(){
 	$('#stamp_list li').on('click', function(){
 		var month = $(this).attr('id').replace('month_', '');
 		localStorage[year+month] = true;
-		window.location = 'message.html?ym='+year+month;
+		window.location = 'index.html?ym='+year+month;
 	});
 });
