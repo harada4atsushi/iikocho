@@ -5,7 +5,7 @@ body, html {
 }
 
 body {
-  background: #FFF url('../img/bg.png') no-repeat left top;
+  background: #FFF url('../img/bg.png') left top;
   -webkit-background-size: cover;
        -o-background-size: cover;
           background-size: cover;
@@ -31,13 +31,24 @@ ul li {
   list-style-type:none;
 }
 ul li.left {
-  border:1px solid;
-  width:45%;
+  width: 65%;
+  height: 120px;
+  padding-top: 20px;
+  padding-left: 40px;
+  background-image: url(../img/popOwn.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 ul li.right {
-  border:1px solid;
-  width:45%;
   margin: 0 0 0 auto;
+  width:65%;
+  height: 120px;
+  padding-top: 20px;
+  padding-left: 40px;
+  background-image: url(../img/popSanta.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+
 }
 
 footer {
@@ -48,12 +59,17 @@ footer {
   text-align: center;
 }
 footer textarea {
-  width: 100%;
+  width: 90%;
 }
 footer #back {
-  position: absolute;
-  left: 5px;
-  bottom: 5px;
-  width: 30px;
-  height: auto;
+  float: left;
+  width: auto;
+  height: 35px;
+  margin-left:10px;
+}
+footer #done {
+  float: right;
+  width: auto;
+  height: 35px;
+  margin-right:10px;
 }
