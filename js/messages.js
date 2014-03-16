@@ -1,3 +1,27 @@
+//localStorage.clear();
+var default_mes = {
+  '201401': [
+    {'message': 'ねぇ、サンタさん。きょうおかし買って欲しかったのがまんしたんだよ', 'direction': 'left'},
+    {'message': 'やぁ、ぴーやくん、教えてくれてありがとう。お母さん大喜びだね！プレゼントまであと7スタンプだね！この調子この調子！', 'direction': 'right'},
+    {'message': 'ありがと。がんばるよ、ぼく', 'direction': 'left'},
+  ],
+  '201402': [
+    {'message': 'やぁ、ぴーやくん。今月のいいこと、教えて欲しいな。', 'direction': 'right'},
+    {'message': '忘れてたのごめんね。ままのせんたくたたみしたよ', 'direction': 'left'},
+    {'message': 'ぴーやくん、教えてくれてありがとう。プレゼントまであと1スタンプだね！ラストスパートだ！', 'direction': 'right'},
+  ],
+  '201403': [],
+  '201404': [],
+  '201405': [],
+  '201406': [],
+  '201407': [],
+  '201408': [],
+  '201409': [],
+  '201410': [],
+  '201411': [],
+  '201412': [],
+};
+
 // getパラメータを取得
 function getQueryString() {
   var result = {};
@@ -24,10 +48,9 @@ function santaSay(arr, ym) {
 
 // ready時の処理
 $$(document).ready(function(){
-  //localStorage.clear();
   var ym = getQueryString()['ym'];
   // localStorageを初期化
-  if (!localStorage[ym]) localStorage[ym] = JSON.stringify([]);
+  if (!localStorage[ym]) localStorage[ym] = JSON.stringify(default_mes[ym]);
 
   var arr = JSON.parse(localStorage[ym]);
 

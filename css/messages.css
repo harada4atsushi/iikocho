@@ -10,7 +10,15 @@ body {
        -o-background-size: cover;
           background-size: cover;
 }
- 
+div#header {
+  height:20px;
+}
+div#header #back {
+  width: auto;
+  height: 30px;
+  margin:5px 0 0 5px;
+}
+
 #container {
     width: 100%;
     position: relative;
@@ -26,15 +34,15 @@ body {
 ul {
   padding: 10px;
   margin: 0;
+  font-size: 0.9em;
 }
 ul li {
   list-style-type:none;
 }
 ul li.left {
   width: 65%;
-  height: 120px;
-  padding-top: 20px;
-  padding-left: 40px;
+  height: 130px;
+  padding: 15px 20px 0 30px;
   background-image: url(../img/popOwn.png);
   background-size: 100%;
   background-repeat: no-repeat;
@@ -42,9 +50,8 @@ ul li.left {
 ul li.right {
   margin: 0 0 0 auto;
   width:65%;
-  height: 120px;
-  padding-top: 20px;
-  padding-left: 40px;
+  height: 140px;
+  padding: 15px 45px 0 30px;
   background-image: url(../img/popSanta.png);
   background-size: 100%;
   background-repeat: no-repeat;
@@ -61,12 +68,7 @@ footer {
 footer textarea {
   width: 90%;
 }
-footer #back {
-  float: left;
-  width: auto;
-  height: 35px;
-  margin-left:10px;
-}
+
 footer #done {
   float: right;
   width: auto;
