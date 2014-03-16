@@ -1,3 +1,16 @@
+// DEMO DATA
+localStorage['201401'] = JSON.stringify([
+    {'message': 'ねぇ、サンタさん。きょうおかし買って欲しかったのがまんしたんだよ', 'direction': 'left'},
+    {'message': 'やぁ、ぴーやくん、教えてくれてありがとう。お母さん大喜びだね！プレゼントまであと7スタンプだね！この調子この調子！', 'direction': 'right'},
+    {'message': 'ありがと。がんばるよ、ぼく', 'direction': 'left'}
+]);
+ localStorage['201402'] = JSON.stringify([
+    {'message': 'やぁ、ぴーやくん。今月のいいこと、教えて欲しいな。', 'direction': 'right'},
+    {'message': '忘れてたのごめんね。ままのせんたくたたみしたよ', 'direction': 'left'},
+    {'message': 'ぴーやくん、教えてくれてありがとう。プレゼントまであと1スタンプだね！ラストスパートだ！', 'direction': 'right'}
+]);
+
+
 $(function(){
 
 	var date  = new Date();
