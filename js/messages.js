@@ -51,6 +51,7 @@ function meSay(arr, ym) {
     localStorage.count = Number(localStorage.count) + 1;
   }
   var message = $$("#message_text").val();
+  if(! message.length) return false;
   $$("#message_text").val('');
   say('left', message, arr, ym);
   arr.push({'message': message, 'direction': 'left'});
