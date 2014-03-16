@@ -39,7 +39,7 @@ function say(direction, message, arr, ym) {
 
 // サンタのメッセージを追加
 function santaSay(arr, ym) {
-  var message = messages[12 - localStorage.count - 1];
+  var message = messages[12 - localStorage.count];
   say('right', message, arr, ym);
   arr.push({'message': message, 'direction': 'right'});
   localStorage[ym] = JSON.stringify(arr);
@@ -47,6 +47,9 @@ function santaSay(arr, ym) {
 
 // 自分のメッセージを追加
 function meSay(arr, ym) {
+  if(! JSON.parse(localStorage[ym]).length){
+    localStorage.count = Number(localStorage.count) + 1;
+  }
   var message = $$("#message_text").val();
   $$("#message_text").val('');
   say('left', message, arr, ym);
