@@ -36,3 +36,10 @@ body {
   display: none; }
   #congratulation img {
     width: 100%; }
+
+#clear {
+  width: 10%;
+  height: 6%;
+  position: absolute;
+  top: 0;
+  left: 0; }
