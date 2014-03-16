@@ -10,6 +10,12 @@ localStorage['201401'] = JSON.stringify([
     {'message': 'ぴーやくん、教えてくれてありがとう。プレゼントまであと1スタンプだね！ラストスパートだ！', 'direction': 'right'}
 ]);
 
+ window.addEventListener("load", function() {
+    setTimeout(function() {
+        scrollBy(0, 1);
+    }, 100);
+}, false);
+
 
 $(function(){
 
