@@ -39,7 +39,7 @@ function getQueryString() {
 }
 
 function santaSay(arr, ym) {
-  var message = 'サンタだよ！';
+  var message = 'ぴーやくん、教えてくれてありがとう。プレゼントまであと1スタンプだね！ラストスパートだ！';
   var mes = $$('<li class="right"></li>').html(message); 
   $$("#mes_region").append(mes);
   arr.push({'message': message, 'direction': 'right'});
