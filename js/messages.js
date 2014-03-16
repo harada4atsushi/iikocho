@@ -73,4 +73,8 @@ $$(document).ready(function(){
   $$("#done").touch(function() {
     meSay(arr, ym);
   });
+
+  $$("#message_text").touch(function() {
+    $$("#message_text")[0].focus();
+  });  
 });
