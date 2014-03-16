@@ -42,4 +42,9 @@ $(function(){
 		//localStorage[year+month] = true;
 		window.location = 'index.html?ym='+year+month;
 	});
+
+	$('#clear').on('click', function(){
+		localStorage.clear();
+		location.reload();
+	});
 });
