@@ -14,12 +14,30 @@ function getQueryString() {
   return result;
 }
 
+// メッセージを追加する
+function say(direction, message, arr, ym) {
+    var iconfile = direction == 'left' ? 'img/popIconOwn.png' : 'img/popIconSanta.png';
+    if (message == '') message = '　';
+    var mes = $$('<li class="' + direction + '">' + message + '<img src="' + iconfile + '" class="' + direction + '_icon"/></li>'); 
+    $$("#mes_region").append(mes);
+}
+
+// サンタのメッセージを追加
 function santaSay(arr, ym) {
   var message = 'ぴーやくん、教えてくれてありがとう。プレゼントまであと1スタンプだね！ラストスパートだ！';
-  var mes = $$('<li class="right">' + message + '<img src="img/popIconSanta.png" class="right_icon"/></li>'); 
-  $$("#mes_region").append(mes);
+  say('right', message, arr, ym);
   arr.push({'message': message, 'direction': 'right'});
   localStorage[ym] = JSON.stringify(arr);
+}
+
+// 自分のメッセージを追加
+function meSay(arr, ym) {
+  var message = $$("#message_text").val();
+  $$("#message_text").val('');
+  say('left', message, arr, ym);
+  arr.push({'message': message, 'direction': 'left'});
+  localStorage[ym] = JSON.stringify(arr);
+  setTimeout(function(){santaSay(arr, ym);}, 1400);
 }
 
 // ready時の処理
@@ -27,26 +45,14 @@ $$(document).ready(function(){
   var ym = getQueryString()['ym'];
   // localStorageを初期化
   if (!localStorage[ym]) localStorage[ym] = JSON.stringify([]);
-
   var arr = JSON.parse(localStorage[ym]);
-
   
   // localstorageからメッセージを復元
   for (var i = 0; i < arr.length; i++) {
-    var iconfile = arr[i]['direction'] == 'left' ? 'img/popIconOwn.png' : 'img/popIconSanta.png';
-    var mes = $$('<li class="' + arr[i]['direction'] + '">' + arr[i]['message'] + '<img src="' + iconfile + '" class="' + arr[i]['direction'] + '_icon"/></li>'); 
-    $$("#mes_region").append(mes);
+    say(arr[i]['direction'], arr[i]['message'], arr, ym);
   }
 
   $$("#done").touch(function() {
-    //arr = JSON.parse(localStorage[ym]);
-    var message = $$("#message_text").val();
-    $$("#message_text").val('');
-    if (message == '') message = '　';
-    var mes = $$('<li class="left">' + message + '<img src="img/popIconOwn.png" class="left_icon"/></li>'); 
-    $$("#mes_region").append(mes);
-    arr.push({'message': message, 'direction': 'left'});
-    localStorage[ym] = JSON.stringify(arr);
-    setTimeout(function(){santaSay(arr, ym);}, 1400);
+    meSay(arr, ym);
   });
 });
