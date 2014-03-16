@@ -78,8 +78,5 @@ $$(document).ready(function(){
 
   $$("#message_text").touch(function() {
     $$("#message_text")[0].focus();
-    var topScroll = document.documentElement.scrollTop;
-    //alert(topScroll);
-    window.scroll(0, topScroll);
   });  
 });
