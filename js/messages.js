@@ -73,6 +73,7 @@ $$(document).ready(function(){
 
   $$("#done").touch(function() {
     meSay(arr, ym);
+    $$('#back').css('top', '0px');
   });
 
   $$("#message_text").touch(function() {
