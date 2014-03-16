@@ -80,6 +80,16 @@ img.left_icon {
   z-index: 5;
 }
 
+div.read {
+  color: red;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  margin: 0;
+  height: 20px;
+  vertical-align: middle; 
+  font-family: ヒラギノ丸ゴ Pro W4;
+}
+
 footer {
   position: absolute;
   bottom: 0;
@@ -93,8 +103,11 @@ footer textarea {
 }
 
 footer #done {
-  float: right;
+  /*float: right;*/
+  right: 10px;
+  top: -1px;
   width: auto;
   height: 35px;
-  margin-right:10px;
+  position: absolute;
+  /*margin-right: 10px;*/
 }

@@ -73,10 +73,12 @@ $$(document).ready(function(){
 
   $$("#done").touch(function() {
     meSay(arr, ym);
-    $$('#back').css('top', '0px');
+    //$$('#back').css('top', '0px');
+    scrollBy(0, 1);
   });
 
   $$("#message_text").touch(function() {
     $$("#message_text")[0].focus();
+    scrollBy(0, -1);
   });  
 });
