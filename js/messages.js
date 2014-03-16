@@ -64,6 +64,7 @@ $$(document).ready(function(){
   $$("#done").touch(function() {
     //arr = JSON.parse(localStorage[ym]);
     var message = $$("#message_text").val();
+    $$("#message_text").val('');
     if (message == '') message = '　';
     var mes = $$('<li class="left"></li>').html(message); 
     $$("#mes_region").append(mes);
