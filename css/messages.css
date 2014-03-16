@@ -48,25 +48,25 @@ ul li {
 ul li.left {
   width: 65%;
   height: 130px;
-  padding: 15px 20px 0 30px;
+  padding: 15px 20px 0 9%;
   background-image: url(../img/popOwn.png);
-  background-size: 100%;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 ul li.right {
-  margin: 0 0 0 auto;
+  margin: 0 0 15px auto;
   width:65%;
   height: 140px;
-  padding: 15px 45px 25px 30px;
+  padding: 15px 13% 25px 30px;
   background-image: url(../img/popSanta.png);
-  background-size: 100%;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 
 img.right_icon {
   position: absolute;
   right: -10px;
-  bottom: -5px;
+  bottom: -20px;
   width: 40px;
   height: auto;
   z-index: 5;
