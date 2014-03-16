@@ -33,6 +33,7 @@ $(function(){
 				count++;
 			}
 		}
+		localStorage.count = count;
 		if(count == 12){
 			$('#congratulation').show();
 			(new Audio('./sound/congratulation.mp3')).play();
