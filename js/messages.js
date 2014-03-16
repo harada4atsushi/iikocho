@@ -16,7 +16,7 @@ function getQueryString() {
 
 function santaSay(arr, ym) {
   var message = 'ぴーやくん、教えてくれてありがとう。プレゼントまであと1スタンプだね！ラストスパートだ！';
-  var mes = $$('<li class="right"></li>').html(message); 
+  var mes = $$('<li class="right">' + message + '<img src="img/popIconSanta.png" class="right_icon"/></li>'); 
   $$("#mes_region").append(mes);
   arr.push({'message': message, 'direction': 'right'});
   localStorage[ym] = JSON.stringify(arr);
@@ -33,7 +33,8 @@ $$(document).ready(function(){
   
   // localstorageからメッセージを復元
   for (var i = 0; i < arr.length; i++) {
-    var mes = $$('<li class="' + arr[i]['direction'] + '"></li>').html(arr[i]['message']); 
+    var iconfile = arr[i]['direction'] == 'left' ? 'img/popIconOwn.png' : 'img/popIconSanta.png';
+    var mes = $$('<li class="' + arr[i]['direction'] + '">' + arr[i]['message'] + '<img src="' + iconfile + '" class="' + arr[i]['direction'] + '_icon"/></li>'); 
     $$("#mes_region").append(mes);
   }
 
@@ -42,7 +43,7 @@ $$(document).ready(function(){
     var message = $$("#message_text").val();
     $$("#message_text").val('');
     if (message == '') message = '　';
-    var mes = $$('<li class="left"></li>').html(message); 
+    var mes = $$('<li class="left">' + message + '<img src="img/popIconOwn.png" class="left_icon"/></li>'); 
     $$("#mes_region").append(mes);
     arr.push({'message': message, 'direction': 'left'});
     localStorage[ym] = JSON.stringify(arr);

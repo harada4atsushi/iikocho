@@ -39,6 +39,7 @@ ul {
 }
 ul li {
   list-style-type:none;
+  position: relative;
 }
 ul li.left {
   width: 65%;
@@ -52,11 +53,27 @@ ul li.right {
   margin: 0 0 0 auto;
   width:65%;
   height: 140px;
-  padding: 15px 45px 0 30px;
+  padding: 15px 45px 25px 30px;
   background-image: url(../img/popSanta.png);
   background-size: 100%;
   background-repeat: no-repeat;
+}
 
+img.right_icon {
+  position: absolute;
+  right: -10px;
+  bottom: -5px;
+  width: 40px;
+  height: auto;
+  z-index: 5;
+}
+img.left_icon {
+  position: absolute;
+  left: -10px;
+  bottom: -20px;
+  width: 35px;
+  height: auto;
+  z-index: 5;
 }
 
 footer {
